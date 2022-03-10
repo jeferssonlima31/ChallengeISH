@@ -15,7 +15,7 @@ public class ResetLoginPassword {
     public void resetPassword(){
 
         WebElement email = driver.findElement(By.id("email"));
-        email.sendKeys(" jef@test.com ");
+        email.sendKeys(" ");
 
         WebElement buttonResetPassword = driver.findElement(By.xpath("//*[@id=\'form_forgotpassword\']/fieldset/p/button"));
         buttonResetPassword.click();

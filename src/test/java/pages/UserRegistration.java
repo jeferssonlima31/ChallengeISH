@@ -20,7 +20,7 @@ public class UserRegistration{
         createAccountButton.click();
 
         WebElement gender = driver.findElement(By.cssSelector("#id_gender1"));
-            gender.click();
+        gender.click();
 
         WebElement firstNameCustomer = driver.findElement(By.id("customer_firstname"));
         firstNameCustomer.sendKeys("Elon");
@@ -42,7 +42,6 @@ public class UserRegistration{
         WebElement yearOfBirth = driver.findElement(By.id("years"));
         WebElement chooseYearOfBirth = driver.findElement(By.xpath("//*[@id=\'years\']/option[30]"));
         chooseYearOfBirth.click();
-
 
         WebElement checkBoxNewsLetter = driver.findElement(By.xpath("//*[@id=\'newsletter\']"));
         checkBoxNewsLetter.click();
@@ -90,7 +89,8 @@ public class UserRegistration{
         mobilePhone.sendKeys("848988845");
 
         WebElement referenceAddress = driver.findElement(By.cssSelector("#alias"));
-        referenceAddress.sendKeys("Hawthorne");
+
+        referenceAddress.sendKeys(" is Hawthorne");
 
         WebElement buttonRegister = driver.findElement(By.xpath("//*[@id=\'submitAccount\']/span"));
         buttonRegister.click();
