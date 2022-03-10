@@ -3,10 +3,13 @@ package teste;
 import helpers.Constants;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import pages.UserRegistration;
+
+import java.util.concurrent.TimeUnit;
 
 import static helpers.Constants.*;
 
@@ -18,17 +21,18 @@ public class UserRegistrationTest  {
 
 
     @BeforeAll
-    public  static void setUpBeforeClasse() throws Exception{
+    public  static void setUp() throws InterruptedException{
         System.setProperty("webdriver.chrome.driver",basicPath);
         driver = new ChromeDriver();
-        driver.get(userRegistrationTest);
         userRegistration = new UserRegistration(driver);
+        driver.get(userRegistrationURL);
         driver.manage().window().maximize();
-        Thread.sleep(3000);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
     }
 
     @Test
-    public void test(){
+    public void CreteUserTest(){
 
         userRegistration.fillOutForm();
 
@@ -36,7 +40,7 @@ public class UserRegistrationTest  {
 
     @AfterAll
     public static void closeAfterToExecute() throws Exception{
-        Thread.sleep(3000);
+        Thread.sleep(5000);
         driver.quit();
     }
 

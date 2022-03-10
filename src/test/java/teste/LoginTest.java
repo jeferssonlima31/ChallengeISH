@@ -35,9 +35,9 @@ public class LoginTest {
 
     @AfterAll
    public  static void closeAfterToExecute() throws Exception{
+
         Thread.sleep(3000);
-        System.out.println("Sucess");
-       driver.quit();
+        driver.quit();
 
     }
 }

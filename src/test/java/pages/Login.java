@@ -10,7 +10,7 @@ public class Login {
     public Login(WebDriver driver) {
         this.driver = driver;
     }
-
+    public  Login(){}
     public void fillOutForm(){
 
         WebElement email = driver.findElement(By.id("email"));
@@ -23,6 +23,13 @@ public class Login {
         buttonLogin.click();
 
     }
+
+   // public void fillTheEmailToNewUsers(){
+      //  WebElement email1 = driver.findElement(By.id("SubmitCreate"));
+       // email1.sendKeys("jlf@cesar.school");
+
+    //}
+
 
 
 
