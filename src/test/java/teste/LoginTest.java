@@ -7,6 +7,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import pages.Login;
 
+import java.util.concurrent.TimeUnit;
+
 import static helpers.Constants.*;
 
 public class LoginTest {
@@ -17,12 +19,12 @@ public class LoginTest {
 
     @BeforeAll
     public static void setUp() throws Exception{
-        System.setProperty("webdriver.chrome.driver",basicPath);
+        System.setProperty("webdriver.chrome.driver",basicPathChrome);
         driver = new ChromeDriver();
         driver.get(loginURL);
         login = new Login(driver);
         driver.manage().window().maximize();
-        Thread.sleep(3000);
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
 
     }

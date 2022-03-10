@@ -17,20 +17,11 @@ public class Login {
         email.sendKeys("jeff@test.com");
 
         WebElement password = driver.findElement(By.id("passwd"));
-        password.sendKeys("12345A@JJ");
+        password.sendKeys("Test123345T");
 
         WebElement buttonLogin = driver.findElement(By.id("SubmitLogin"));
         buttonLogin.click();
 
     }
-
-   // public void fillTheEmailToNewUsers(){
-      //  WebElement email1 = driver.findElement(By.id("SubmitCreate"));
-       // email1.sendKeys("jlf@cesar.school");
-
-    //}
-
-
-
 
 }

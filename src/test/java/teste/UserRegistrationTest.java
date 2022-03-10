@@ -22,12 +22,12 @@ public class UserRegistrationTest  {
 
     @BeforeAll
     public  static void setUp() throws InterruptedException{
-        System.setProperty("webdriver.chrome.driver",basicPath);
+        System.setProperty("webdriver.chrome.driver",basicPathChrome);
         driver = new ChromeDriver();
         userRegistration = new UserRegistration(driver);
         driver.get(userRegistrationURL);
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
     }
 
@@ -41,6 +41,7 @@ public class UserRegistrationTest  {
     @AfterAll
     public static void closeAfterToExecute() throws Exception{
         Thread.sleep(5000);
+
         driver.quit();
     }
 
