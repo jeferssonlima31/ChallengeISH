@@ -8,9 +8,7 @@ import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import pages.UserRegistration;
-
 import java.util.concurrent.TimeUnit;
-
 import static helpers.Constants.*;
 
 public class UserRegistrationTest  {
@@ -27,7 +25,7 @@ public class UserRegistrationTest  {
         userRegistration = new UserRegistration(driver);
         driver.get(userRegistrationURL);
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
     }
 
